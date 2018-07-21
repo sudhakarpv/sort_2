@@ -1,10 +1,14 @@
 # sort_2
 def main():
     pass
-n=input().split()
-print(n)
-for i in n:
-    n.sort()
-print(n)
+def smallnum(n):
+    for i in range(len(n)):
+        for k in range (i+1,len(n)):
+            if n[k]<n[i]:
+                n[i],n[k]=n[k],n[i]
+    print(' '.join(map(str,n)))
+
+smallnum (n=list(map(int,input().split())))
+
 if __name__ == '__main__':
     main()
